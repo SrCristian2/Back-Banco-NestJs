@@ -31,7 +31,6 @@ export class UserService {
       }
 
       const newUser = await this.userModel.create(createUserDto);
-      // console.log(newUser);
 
       const token = this.jwtService.sign({ _id: newUser._id });
 
